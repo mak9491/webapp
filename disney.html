@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+	<title> Disney.com | The official home for all things Disney</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="http://img3.wikia.nocookie.net/__cb20131231203613/starwars/images/7/71/Disney_favicon.png">
+     <link rel = "StyleSheet" type = "text/css" href = "disney.css">
+   <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.js"></script>
+
+   <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
+
+   <script type="text/javascript">
+
+   		$("document").ready(function(){
+   		$(".slider").cycle()
+})
+   </script>
+
+  
+  <script type="text/javascript">
+            colors = new Array('#000080', '#0000FF', '#00FFFF', '#9932CC', '#1E90FF', '#FFFF00');
+            function annoyingEffect(tic){
+                tic %= colors.length;
+                document.bgColor = colors[tic];
+                setTimeout("annoyingEffect("+(tic+1)+")", 5050);
+            }
+
+            function annoyingEffectOnDiv(tic, divId){
+                tic %= colors.length;
+                divVar = document.getElementById(divId);
+                divVar.style.background = colors[tic];
+                setTimeout("annoyingEffectOnDiv("+(tic+1)+", '"+divId+"')", 5050);
+            }
+
+   </script>
+</head>
+<body id = "bod1" onload="annoyingEffect(0); annoyingEffectOnDiv(2, 'bod1');">
+	<div id = "header">
+		<ul>
+			<li>
+				<a href="#">Disney.com</a>
+			</li>
+			
+			<li>
+				<a href="#store">Store</a>
+			</li>
+			<li>
+				<a href="#Parks & Travel">Parks & Travel</a>
+			</li>
+			<li>
+				<a href="#Video">Video
+				</a>
+			</li>
+			<li>
+				<a href="#Movies">Movies
+				</a>
+			</li>
+			<li>
+				<a href="#TV">TV
+				</a>
+			</li>
+			<li>
+				<a href="#Music">Music
+				</a>
+			</li>
+			<li>
+				<a href="#Games">Games
+				</a>
+			</li>
+			<li>
+				<a href="#Books">Books
+				</a>
+			</li>
+			<li>
+				<a href="#Live Shows">Live Shows
+				</a>
+			</li>
+			<li>
+				<input  id = "search" type = "text" placeholder = "Search" autocomplete = "on">
+			</li>
+		</ul>
+	</div>
+
+	
+	<div class = "homepage" id = "homepage1">
+		<div class = "box">
+		<div class = "slider">
+			<img id = "1" src="sliderimg1.jpg" border = "0" alt = "img1"/>
+			<img id = "2" src="sliderimg2.jpg" border = "0" alt = "img2"/>
+			<img id = "3" src="sliderimg3.jpg" border = "0" alt = "img3"/>
+			<img id = "4" src="sliderimg4.jpg" border = "0" alt = "img4"/>
+			<img id = "5" src="sliderimg5.jpg" border = "0" alt = "img5"/>
+			<img id = "6" src="sliderimg6.jpg" border = "0" alt = "img6"/>
+			<img id = "7" src="sliderimg7.jpg" border = "0" alt = "img7"/>
+			<img id = "8" src="sliderimg8.jpg" border = "0" alt = "img8"/>
+			</div>
+		<span class = "span1">Featured Games</span><br>
+		<span class = "span2">Check out what we are playing today!</span><br><br>
+		 
+		 <div class = "games">
+		 	<div id = "game1"><img src="game1.jpg"><br><a href="#"><p class = "pgame">Radio Disney Music Awards: Ardy's Party <br> 2015<br></p> </a> 
+			<p class = "para">Join Ardy in his newest music adventure  <br>to findthe next great artists!</p>
+			</div>
+		 	
+		 	<div id = "game2"><img src="game2.jpg"><br> <a href="#"><p class = "pgame">My New Puppy</p></a>
+		 		<p class = "para">Adopt a puppy! Play, feed, and groom them <br>and watch them grow and thrive!</p>
+		 	</div>
+		 	
+		 	<div id = "adv"><img src="adv.jpg">
+		 		<p id = "pgameadv">Advertisement</p>
+		 	</div><br>
+
+		 	<span class = "span1">Characters</span><br>
+		 	<span class = "span2">Explore your favourite Disney characters</span><br>
+
+
+		 	<div class = "tableimgs">
+		 		<ul class = "tableimgsrow1">
+		 			<li><img class = "cartoon1" src="teacup.png"><span id = "r1c1">Teacup</span></li>
+		 			<li><img class = "cartoon1" src="slipper.jpg"><span id = "r1c2">Slipper</span></li>
+		 			<li><img class = "cartoon1" src="lapis.jpg"><span id = "r1c3">Lapis</span></li>
+		 			<li><img class = "cartoon1" src="gleam.jpg"><span id = "r1c4">Gleam</span></li>
+		 		</ul>
+		 		<ul class = "tableimgsrow2">
+		 			<li><img class = "cartoon1" src="muffin.jpg"><span id = "r2c1">Muffin</span></li>
+		 			<li><img class = "cartoon1" src="seashell.jpg"><span id = "r2c2">Seashell</span></li>
+		 			<li><img class = "cartoon1" src="treasure.png"><span id = "r2c3">Treasure</span></li>
+		 			<li><img class = "cartoon1" src="summer.png"><span id = "r2c4">Summer</span></li>
+		 		</ul>	
+		 	</div>
+		 </div>
+</div>
+</div>
+</body>
+</html>
